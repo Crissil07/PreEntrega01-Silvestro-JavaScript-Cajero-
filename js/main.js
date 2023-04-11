@@ -12,7 +12,7 @@ function myDeposit(insertCash, deposit){
 
 function switchOption(option){
 
-    while(option !== "4"){
+    while(option <= "4"){
 
         switch (option){
             case "1":
@@ -20,7 +20,7 @@ function switchOption(option){
                 alert("You have " + moneyAccount + "in your account.");
                 break;
             case "2":
-                let extract = parseInt(prompt("Ingrese el monto a extraer:"));
+                let extract = parseInt(prompt("Insert the amount of money to withdraw:"));
                 if (moneyAccount >= extract){
                     moneyAccount= myExtraction(moneyAccount, extract);
                     console.log(moneyAccount);
@@ -31,10 +31,10 @@ function switchOption(option){
                 }
                 break;
             case "3":
-                let deposit=parseInt(prompt("Insert"));
+                let deposit=parseInt(prompt("Insert the amount of money to deposit"));
                 moneyAccount= myDeposit(moneyAccount, deposit);
                 console.log(moneyAccount);
-                alert("Money deposited successfully.\n" + "Saldo money balance is: " + moneyAccount +" $.");
+                alert("Money deposited successfully.\n" + "Your money balance is: " + moneyAccount +" $.");
                 break;
             case "4":
                 console.log("Thank you for using our service .");
